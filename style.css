@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --- NEW: Progress Bar Styling --- */
+#progress-section h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+#progress-bar-container {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    height: 30px;
+    position: relative;
+}
+
+#progress-bar-fill {
+    height: 100%;
+    width: 0%; /* Initial width set by JS */
+    background-color: #28a745; /* Green */
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+#progress-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- Daily Habits Styling --- */
+#daily-habits h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.habit-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.habit-list input[type="checkbox"] {
+    margin-right: 15px;
+    min-width: 20px;
+    height: 20px;
+}
+
+.habit-list label {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.habit-list input[type="checkbox"]:checked + label {
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* --- Weekly Plan Styling --- */
+#weekly-plan h2 {
+    color: #ff6347; /* Tomato color */
+    border-bottom: 2px solid #ff6347;
+    padding-bottom: 10px;
+}
+
+.week-block {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.week-header {
+    background-color: #e9ecef;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.week-goal {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.day-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Initially hidden, controlled by JavaScript */
+    display: none; 
+}
+
+.day-list.active {
+    display: block;
+}
+
+.day-list li {
+    display: flex;
+    flex-direction: column; /* Changed to column to stack text and instructions */
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+}
+
+.task-content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.day-list input[type="checkbox"] {
+    margin-right: 15px;
+    min-width: 20px;
+    height: 20px;
+}
+
+.day-list label {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.day-list input[type="checkbox"]:checked + label {
+    color: #28a745; /* Green for completion */
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.project-task {
+    background-color: #fff3cd !important; /* Light yellow for projects */
+    font-weight: bold;
+}
+
+/* NEW: Learning Instructions Styling */
+.learning-instructions {
+    font-size: 0.85em;
+    color: #555;
+    background-color: #f8f9fa; /* Light background for the tip */
+    border-left: 3px solid #007bff;
+    padding: 5px 10px;
+    margin-top: 5px;
+    width: calc(100% - 35px); /* Adjusted width to align with text */
+    margin-left: 35px; /* Offset to align with task text */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
